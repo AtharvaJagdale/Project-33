@@ -49,7 +49,7 @@ box15=new Box(870,210,35,35)
 box16=new Box(920,210,35,35)
 box17=new Box(970,210,35,35)
 
-box18=new Box(920,100,35,35)
+box18=new Box(920,190,35,35)
 
 sling1= new Slingshot(rasengan,{x:200,y:360})
 Engine.run(engine);
