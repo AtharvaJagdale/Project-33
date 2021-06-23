@@ -20,7 +20,7 @@ world = engine.world;
 //Write the object codes here
 rasengan=Bodies.circle(250,360,20)
 World.add(world,rasengan)
-naruto=Bodies.rectangle(150,360,200,300,{isStatic:true})
+naruto=Bodies.rectangle(1000,515,200,300,{isStatic:true})
 World.add(world,naruto)
 groundObject=new ground(600,680,1200,20);
 stand1=new ground(520,400,200,10)
@@ -51,7 +51,7 @@ box17=new Box(970,210,35,35)
 
 box18=new Box(920,100,35,35)
 
-sling1= new Slingshot(rasengan.body,{x:200,y:360})
+sling1= new Slingshot(rasengan,{x:200,y:360})
 Engine.run(engine);
 }
 function draw(){
@@ -88,7 +88,7 @@ sling1.display()
 }
 function mouseDragged(){
 
-    Matter.Body.setPosition(rasengan.body,{x:mouseX,y:mouseY}) 
+    Matter.Body.setPosition(rasengan,{x:mouseX,y:mouseY}) 
    }
    
    //create mouseReleased function here
@@ -100,7 +100,7 @@ function mouseDragged(){
    //create keyPressed function here
    function keyPressed(){
      if(keyCode===32)
-     sling1.attach(rasengan.body)
+     sling1.attach(rasengan)
    }
 
 
